@@ -1,0 +1,38 @@
+{
+  "name": "@flexy/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 5173",
+    "deploy": "wrangler pages deploy dist --project-name=flexy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@flexy/api-client": "workspace:*",
+    "@flexy/player": "workspace:*",
+    "@flexy/types": "workspace:*",
+    "@flexy/ui": "workspace:*",
+    "@tanstack/react-query": "^5.40.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.0",
+    "lucide-react": "^0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0",
+    "wrangler": "^3.55.0"
+  }
+}

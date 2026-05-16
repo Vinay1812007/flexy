@@ -1,0 +1,11 @@
+{
+  "error": false,
+  "cached": false,
+  "source": "saavn-dev",
+  "data": [
+    { "adapter": "saavn-dev",        "ok": true,  "ms": 187, "ema": 0.99, "priority": 100 },
+    { "adapter": "saavn-sumit",      "ok": true,  "ms": 251, "ema": 0.96, "priority": 90 },
+    { "adapter": "nepotune",         "ok": false, "ms": 4001,"ema": 0.42, "priority": 70 },
+    { "adapter": "jiosaavn-private", "ok": true,  "ms": 318, "ema": 0.88, "priority": 50 }
+  ]
+}

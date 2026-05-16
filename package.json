@@ -1,0 +1,30 @@
+{
+  "name": "flexy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Flexy — premium music streaming platform (Spotify x Resso x JioSaavn)",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter \"./apps/*\" --filter \"./services/*\" dev",
+    "dev:web": "pnpm --filter @flexy/web dev",
+    "dev:admin": "pnpm --filter @flexy/admin dev",
+    "dev:api": "pnpm --filter @flexy/workers dev",
+    "build": "pnpm -r build",
+    "build:web": "pnpm --filter @flexy/web build",
+    "build:admin": "pnpm --filter @flexy/admin build",
+    "build:api": "pnpm --filter @flexy/workers build",
+    "deploy:api": "pnpm --filter @flexy/workers deploy",
+    "deploy:web": "pnpm --filter @flexy/web deploy",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r exec rm -rf node_modules dist .turbo .wrangler"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "pnpm": ">=9.0.0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "error": false,
+  "cached": false,
+  "source": "saavn-dev",
+  "data": {
+    "query": "tum hi ho",
+    "source": "saavn-dev",
+    "songs": {
+      "total": 1,
+      "results": [
+        {
+          "id": "qLZ3IbAa",
+          "name": "Tum Hi Ho",
+          "type": "song",
+          "duration": 261,
+          "language": "hindi",
+          "year": 2013,
+          "explicit": false,
+          "hasLyrics": true,
+          "source": "saavn-dev",
+          "image": [
+            { "quality": "50x50",   "url": "https://c.saavncdn.com/.../50x50.jpg" },
+            { "quality": "150x150", "url": "https://c.saavncdn.com/.../150x150.jpg" },
+            { "quality": "500x500", "url": "https://c.saavncdn.com/.../500x500.jpg" }
+          ],
+          "downloadUrl": [
+            { "quality": "96kbps",  "url": "https://aac.saavncdn.com/.../96.mp4" },
+            { "quality": "160kbps", "url": "https://aac.saavncdn.com/.../160.mp4" },
+            { "quality": "320kbps", "url": "https://aac.saavncdn.com/.../320.mp4" }
+          ],
+          "artists": {
+            "primary":  [{ "id": "455130", "name": "Arijit Singh" }],
+            "featured": [],
+            "all":      [{ "id": "455130", "name": "Arijit Singh" }, { "id": "459320", "name": "Mithoon", "role": "lyricist" }]
+          },
+          "album": { "id": "1142503", "name": "Aashiqui 2" }
+        }
+      ]
+    },
+    "albums":    { "total": 0, "results": [] },
+    "artists":   { "total": 0, "results": [] },
+    "playlists": { "total": 0, "results": [] }
+  }
+}
