@@ -1,0 +1,51 @@
+name = "flexy-api"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# ───── Bindings ─────
+
+# KV — hot catalog cache (search results, song metadata, CMS overrides)
+[[kv_namespaces]]
+binding = "CATALOG"
+id = "REPLACE_WITH_KV_ID"
+preview_id = "REPLACE_WITH_PREVIEW_KV_ID"
+
+# KV — adapter health + per-IP rate limits
+[[kv_namespaces]]
+binding = "OPS"
+id = "REPLACE_WITH_OPS_KV_ID"
+preview_id = "REPLACE_WITH_OPS_PREVIEW_KV_ID"
+
+# D1 — analytics + admin
+[[d1_databases]]
+binding = "DB"
+database_name = "flexy-analytics"
+database_id = "REPLACE_WITH_D1_ID"
+
+# R2 — optional cover-art cache
+[[r2_buckets]]
+binding = "COVERS"
+bucket_name = "flexy-covers"
+
+# Durable Object — real-time playback session
+[[durable_objects.bindings]]
+name = "PLAYBACK"
+class_name = "PlaybackSession"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["PlaybackSession"]
+
+# ───── Variables ─────
+[vars]
+ALLOWED_ORIGINS = "https://flexy.pages.dev,http://localhost:5173,http://localhost:5174"
+UPSTREAM_SAAVN_DEV = "true"
+UPSTREAM_SAAVN_SUMIT = "true"
+UPSTREAM_NEPOTUNE = "true"
+UPSTREAM_JIOSAAVN_PRIVATE = "true"
+
+# Secrets (set with `wrangler secret put NAME`):
+#   GEMINI_API_KEY
+#   ADMIN_TOKEN
